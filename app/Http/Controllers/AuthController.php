@@ -11,6 +11,7 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $user = User::where('email',$request->email)->where('password',$request->password)->first();
+        // $user = auth()->attempt(['email' => $request->email, 'password' => $request->password]);
         if ($user) {
             auth()->loginUsingId($user->id);
             return redirect('/');

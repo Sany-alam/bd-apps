@@ -22,11 +22,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/view-apk','ApkController@view_apk');
     Route::view('/add-account','add-account');
     Route::post('/add-account','AccountController@add_account');
+    Route::get('logout','AuthController@logout');
 });
 
 Route::group(['middleware' => 'guest'], function () {
     Route::view('login','login')->name('login');
     Route::post('login','AuthController@login');
-    Route::get('logout','AuthController@logout');
 });
 

@@ -75,6 +75,7 @@
     <nav class="navbar navbar-dark bg-dark">
         <a href="javascript:;" onclick="openNav()" class="navbar-toggler"><i class="navbar-toggler-icon"></i></a>
         <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#">{{auth()->user()->name}}</a></li>
             <li class="nav-item"><a class="nav-link" href="{{url('logout')}}">Logout</a></li>
         </ul>
     </nav>

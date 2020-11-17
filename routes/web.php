@@ -22,6 +22,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/view-apk','ApkController@view_apk');
     Route::view('/add-account','add-account');
     Route::post('/add-account','AccountController@add_account');
+    Route::get('/view-account','AccountController@view_account');
+    Route::get('/edit-account/{id}','AccountController@edit_account');
+    Route::post('/update-account','AccountController@update_account');
+    Route::get('/delete-account/{id}','AccountController@delete_account');
     Route::get('logout','AuthController@logout');
 });
 

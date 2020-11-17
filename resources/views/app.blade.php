@@ -69,14 +69,15 @@
             <li class="nav-item"><a href="{{url('/')}}" class="nav-link @yield('Add-apk')">Add apk</a></li>
             <li class="nav-item"><a href="{{url('view-apk')}}" class="nav-link @yield('View-apk')">View apk</a></li>
             <li class="nav-item"><a href="{{url('add-account')}}" class="nav-link @yield('Add-account')">Add account</a></li>
+            <li class="nav-item"><a href="{{url('view-account')}}" class="nav-link @yield('View-account')">View account</a></li>
         </ul>
     </div>
 
     <nav class="navbar navbar-dark bg-dark">
         <a href="javascript:;" onclick="openNav()" class="navbar-toggler"><i class="navbar-toggler-icon"></i></a>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="#">{{auth()->user()->name}}</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{url('logout')}}">Logout</a></li>
+        <ul class="nav ml-auto">
+            <li class="nav-item"><a class="nav-link text-light" href="#">{{auth()->user()->name}}</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="{{url('logout')}}">Logout</a></li>
         </ul>
     </nav>
 
